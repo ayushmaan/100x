@@ -1,15 +1,12 @@
 from json.tool import main
 from math import ceil, floor
 from operator import index
-from select import select
+
 import streamlit as st
 import json
 import random
 from functools import reduce
 
-import talib
-import pandas as pd
-import scipy.signal as sp
 st.set_page_config(layout="wide",page_title='100X.Space', page_icon=':money',initial_sidebar_state='expanded')
 
 st.title("100X.Space")
