@@ -1,0 +1,34 @@
+
+
+
+
+
+# woodies
+//@version=4
+// This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
+// © ceyhun
+```
+study(title="Woodie Pivot Point", overlay=true)
+
+xHigh = security(syminfo.tickerid, "D", high[1])
+xLow = security(syminfo.tickerid, "D", low[1])
+xClose = security(syminfo.tickerid, "D", close[1])
+xOpen = security(syminfo.tickerid, "D", open[1])
+
+pp = (xHigh + xLow + xOpen + xOpen) / 4
+r1 = 2 * pp - xLow
+s1 = 2 * pp - xHigh
+r2 = pp + xHigh - xLow
+s2 = pp - (xHigh - xLow)
+r3 = xHigh + 2 * (pp - xLow)
+s3 = xLow - 2 * (xHigh - pp)
+
+plot(r1, color=color.green, title="R1", style=plot.style_circles, linewidth=2)
+plot(r2, color=color.green, title="R2", style=plot.style_circles, linewidth=2)
+plot(r3, color=color.green, title="R3", style=plot.style_circles, linewidth=2)
+plot(pp, color=color.black, title="PP", style=plot.style_circles, linewidth=2)
+plot(s1, color=color.red, title="S1", style=plot.style_circles, linewidth=2)
+plot(s2, color=color.red, title="S2", style=plot.style_circles, linewidth=2)
+plot(s3, color=color.red, title="S3", style=plot.style_circles, linewidth=2)
+```
+
