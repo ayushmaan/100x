@@ -8,6 +8,7 @@
 // This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
 // © ceyhun
 ```pine
+
 study(title="Woodie Pivot Point", overlay=true)
 
 xHigh = security(syminfo.tickerid, "D", high[1])
@@ -30,5 +31,6 @@ plot(pp, color=color.black, title="PP", style=plot.style_circles, linewidth=2)
 plot(s1, color=color.red, title="S1", style=plot.style_circles, linewidth=2)
 plot(s2, color=color.red, title="S2", style=plot.style_circles, linewidth=2)
 plot(s3, color=color.red, title="S3", style=plot.style_circles, linewidth=2)
+
 ```
 
